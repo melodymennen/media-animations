@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+  background-color: gray;
+  height: 100vh;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 16px 30px;
+  color: white;
+  height: 40px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: violet;
+}
+
+.circle {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 50px;
+}
+
+.animation2 {
+  animation-name: colorslide;
+  animation-duration: 15s;
+  animation-iteration-count: 1;
+}
+
+.animation1 {
+  animation-name: colorslide;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorslide {
+  0%{
+    background-color: violet;
+  }
+  50% {
+    background-color: teal;
+    transform: rotate(180deg)
+  }
+  100% {
+    background-color: violet;
+    transform: rotate(360deg)
+  }
+}
+
+/* @media(min-width: 991px) {
+  
+} */
+
+@media(max-width: 991px) {
+  .nav {
+    background-color: black;
+    height: 20px;
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+  }
+  
+  .menu-btn {
+    display: flex;
+  }
+  
+  .menu-text {
+    display: none;
+  }
+
+}
+
+
+
